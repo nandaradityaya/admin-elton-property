@@ -1,0 +1,363 @@
+<!-- meta tags and other links -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elton Admin</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/elton-favicon.svg"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="assets/css/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/dataTables.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <button type="button" class="sidebar-close-btn">
+        <iconify-icon icon="radix-icons:cross-2"></iconify-icon>
+      </button>
+      <div>
+        <a href="index.html" class="sidebar-logo">
+          <img
+            src="assets/images/elton-property-logo.svg"
+            alt="site logo"
+            class="light-logo"
+          />
+          <img
+            src="assets/images/logo-light.png"
+            alt="site logo"
+            class="dark-logo"
+          />
+          <img
+            src="assets/images/logo-icon.png"
+            alt="site logo"
+            class="logo-icon"
+          />
+        </a>
+      </div>
+      <div class="sidebar-menu-area">
+        <ul class="sidebar-menu" id="sidebar-menu">
+          <li class="sidebar-menu-group-title">Menu</li>
+          <li>
+            <a href="index.html">
+              <iconify-icon
+                icon="solar:home-smile-angle-outline"
+                class="menu-icon"
+              ></iconify-icon>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="property.html">
+              <iconify-icon icon="fe:vector" class="menu-icon"></iconify-icon>
+              <span>Property</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <div class="navbar-header">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-auto">
+            <div class="d-flex flex-wrap align-items-center gap-4">
+              <button type="button" class="sidebar-toggle">
+                <iconify-icon
+                  icon="heroicons:bars-3-solid"
+                  class="icon text-2xl non-active"
+                ></iconify-icon>
+                <iconify-icon
+                  icon="iconoir:arrow-right"
+                  class="icon text-2xl active"
+                ></iconify-icon>
+              </button>
+              <button type="button" class="sidebar-mobile-toggle">
+                <iconify-icon
+                  icon="heroicons:bars-3-solid"
+                  class="icon"
+                ></iconify-icon>
+              </button>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="d-flex flex-wrap align-items-center gap-3">
+              <div class="dropdown">
+                <button
+                  class="has-indicator w-40-px h-40-px bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <iconify-icon
+                    icon="iconoir:bell"
+                    class="text-primary-light text-xl"
+                  ></iconify-icon>
+                </button>
+                <div class="dropdown-menu to-top dropdown-menu-lg p-0">
+                  <div
+                    class="m-16 py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2"
+                  >
+                    <div>
+                      <h6 class="text-lg text-primary-light fw-semibold mb-0">
+                        Notifications
+                      </h6>
+                    </div>
+                    <span
+                      class="text-primary-600 fw-semibold text-lg w-40-px h-40-px rounded-circle bg-base d-flex justify-content-center align-items-center"
+                      >5</span
+                    >
+                  </div>
+
+                  <div class="max-h-400-px overflow-y-auto scroll-sm pe-4">
+                    <a
+                      href="javascript:void(0)"
+                      class="px-24 py-12 d-flex align-items-start gap-3 mb-2 justify-content-between"
+                    >
+                      <div
+                        class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-3"
+                      >
+                        <span
+                          class="w-44-px h-44-px bg-success-subtle text-success-main rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        >
+                          <iconify-icon
+                            icon="bitcoin-icons:verify-outline"
+                            class="icon text-xxl"
+                          ></iconify-icon>
+                        </span>
+                        <div>
+                          <h6 class="text-md fw-semibold mb-4">
+                            Congratulations
+                          </h6>
+                          <p
+                            class="mb-0 text-sm text-secondary-light text-w-200-px"
+                          >
+                            Your profile has been Verified. Your profile has
+                            been Verified
+                          </p>
+                        </div>
+                      </div>
+                      <span class="text-sm text-secondary-light flex-shrink-0"
+                        >23 Mins ago</span
+                      >
+                    </a>
+                  </div>
+
+                  <div class="text-center py-12 px-16">
+                    <a
+                      href="javascript:void(0)"
+                      class="text-primary-600 fw-semibold text-md"
+                      >See All Notification</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  class="d-flex justify-content-center align-items-center rounded-circle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <img
+                    src="assets/images/avatars/avatar-1.png"
+                    alt="image"
+                    class="w-40-px h-40-px object-fit-cover rounded-circle"
+                  />
+                </button>
+                <div class="dropdown-menu to-top dropdown-menu-sm">
+                  <div
+                    class="py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2"
+                  >
+                    <div>
+                      <h6 class="text-lg text-primary-light fw-semibold mb-2">
+                        Mathew Judianto
+                      </h6>
+                      <span class="text-secondary-light fw-medium text-sm"
+                        >Admin</span
+                      >
+                    </div>
+                    <button type="button" class="hover-text-danger">
+                      <iconify-icon
+                        icon="radix-icons:cross-1"
+                        class="icon text-xl"
+                      ></iconify-icon>
+                    </button>
+                  </div>
+                  <ul class="to-top-list">
+                    <li>
+                      <a
+                        class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3"
+                        href="#"
+                      >
+                        <iconify-icon
+                          icon="solar:user-linear"
+                          class="icon text-xl"
+                        ></iconify-icon>
+                        My Profile</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3"
+                        href="javascript:void(0)"
+                      >
+                        <iconify-icon
+                          icon="lucide:power"
+                          class="icon text-xl"
+                        ></iconify-icon>
+                        Log Out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-main-body">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24"
+        >
+          <h6 class="fw-semibold mb-0">Property</h6>
+        </div>
+
+        <div class="card basic-data-table">
+          <div class="card-header d-flex justify-content-between">
+            <h5 class="card-title mb-0">Property List</h5>
+            <a
+              href="add-property.html"
+              type="button"
+              class="btn btn-primary-600 radius-8 px-20"
+            >
+              <i></i>
+              + Add New
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table
+                class="table bordered-table mb-0"
+                id="dataTable"
+                data-page-length="10"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">Property Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Apartment Name</th>
+                    <th scope="col">Area</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Land Size</th>
+                    <th scope="col">Building Size</th>
+                    <th scope="col">Bedroomms</th>
+                    <th scope="col">Study Room</th>
+                    <th scope="col">Bathrooms</th>
+                    <th scope="col">Maid's Room</th>
+                    <th scope="col">Maid's Bathrooms</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Price/m2</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Pangrango Lux</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img
+                          src="assets/images/img-dummy.png"
+                          alt=""
+                          class="flex-shrink-0 me-12 radius-8"
+                        />
+                        <img
+                          src="assets/images/img-dummy.png"
+                          alt=""
+                          class="flex-shrink-0 me-12 radius-8"
+                        />
+                        <img
+                          src="assets/images/img-dummy.png"
+                          alt=""
+                          class="flex-shrink-0 me-12 radius-8"
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aliquid, qui totam! Consectetur quidem voluptates aliquam
+                      velit cumque, quos quis sapiente ea modi maxime
+                      reprehenderit perspiciatis omnis! Deserunt delectus ea
+                      suscipit.
+                    </td>
+                    <td>Capitol Park</td>
+                    <td>Kelapa Gading</td>
+                    <td>Alamat</td>
+                    <td>600 m2</td>
+                    <td>10 m2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Rp. 500.000.000</td>
+                    <td>Rp. 650.000</td>
+                    <td>
+                      <a
+                        href="#"
+                        class="w-32-px h-32-px bg-primary-light text-primary-600 rounded-circle d-inline-flex align-items-center justify-content-center"
+                      >
+                        <iconify-icon icon="iconamoon:eye-light"></iconify-icon>
+                      </a>
+                      <a
+                        href="#"
+                        class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center"
+                      >
+                        <iconify-icon icon="lucide:edit"></iconify-icon>
+                      </a>
+                      <a
+                        href="#"
+                        class="w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center"
+                      >
+                        <iconify-icon
+                          icon="mingcute:delete-2-line"
+                        ></iconify-icon>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="d-footer">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-auto">
+            <p class="mb-0">© 2024 Elton Property. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/lib/dataTables.min.js"></script>
+    <script src="assets/js/lib/iconify-icon.min.js"></script>
+    <script src="assets/js/lib/jquery-ui.min.js"></script>
+    <script src="assets/js/lib/magnifc-popup.min.js"></script>
+    <script src="assets/js/lib/slick.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+      let table = new DataTable("#dataTable");
+    </script>
+  </body>
+</html>
